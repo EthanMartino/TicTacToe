@@ -28,16 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        playersTurnTextView = findViewById(R.id.playersTurnTextView);
-        topLeftBtn = findViewById(R.id.topLeftBtn);
-        middleLeftBtn = findViewById(R.id.middleLeftBtn);
-        bottomLeftBtn = findViewById(R.id.bottomLeftBtn);
-        topMiddleBtn = findViewById(R.id.topMiddleBtn);
-        middleMiddleBtn = findViewById(R.id.middleMiddleBtn);
-        bottomMiddleBtn = findViewById(R.id.bottomMiddleBtn);
-        topRightBtn = findViewById(R.id.topRightBtn);
-        middleRightBtn = findViewById(R.id.middleRightBtn);
-        bottomRightBtn = findViewById(R.id.bottomRightBtn);
+        initializeButtons();
     }
 
     public void onClick(View view){
@@ -71,6 +62,19 @@ public class MainActivity extends AppCompatActivity {
         bottomRightBtn.setText("");
         playersTurnTextView.setText(R.string.player_x_s_turn);
         enableOrDisableButtons(true);
+    }
+
+    private void initializeButtons(){
+        playersTurnTextView = findViewById(R.id.playersTurnTextView);
+        topLeftBtn = findViewById(R.id.topLeftBtn);
+        middleLeftBtn = findViewById(R.id.middleLeftBtn);
+        bottomLeftBtn = findViewById(R.id.bottomLeftBtn);
+        topMiddleBtn = findViewById(R.id.topMiddleBtn);
+        middleMiddleBtn = findViewById(R.id.middleMiddleBtn);
+        bottomMiddleBtn = findViewById(R.id.bottomMiddleBtn);
+        topRightBtn = findViewById(R.id.topRightBtn);
+        middleRightBtn = findViewById(R.id.middleRightBtn);
+        bottomRightBtn = findViewById(R.id.bottomRightBtn);
     }
 
     private boolean isClicked(Button thisButton){
@@ -117,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayDialog(String winnerMessage){
         new AlertDialog.Builder(this)
-                .setTitle("Game Over!")
+                .setTitle(R.string.game_over)
                 .setMessage(winnerMessage)
 
                 .setPositiveButton(android.R.string.yes, null)

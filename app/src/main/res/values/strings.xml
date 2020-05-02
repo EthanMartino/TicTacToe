@@ -8,4 +8,5 @@
     <string name="x_is_winner">Player X is the winner!</string>
     <string name="o_is_winner">Player O is the winner!</string>
     <string name="tie_game">Tie Game!</string>
+    <string name="game_over">Game Over!</string>
 </resources>
