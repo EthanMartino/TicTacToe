@@ -104,7 +104,10 @@ public class MainActivity extends AppCompatActivity {
                 topMiddleBtn.getText().equals(player) && middleMiddleBtn.getText().equals(player) && bottomMiddleBtn.getText().equals(player) ||
                 topRightBtn.getText().equals(player) && middleRightBtn.getText().equals(player) && bottomRightBtn.getText().equals(player) ||
                 topLeftBtn.getText().equals(player) && middleMiddleBtn.getText().equals(player) && bottomRightBtn.getText().equals(player) ||
-                topRightBtn.getText().equals(player) && middleMiddleBtn.getText().equals(player) && bottomLeftBtn.getText().equals(player);
+                topRightBtn.getText().equals(player) && middleMiddleBtn.getText().equals(player) && bottomLeftBtn.getText().equals(player) ||
+                topLeftBtn.getText().equals(player) && topMiddleBtn.getText().equals(player) && topRightBtn.getText().equals(player) ||
+                middleLeftBtn.getText().equals(player) && middleMiddleBtn.getText().equals(player) && middleRightBtn.getText().equals(player) ||
+                bottomLeftBtn.getText().equals(player) && bottomMiddleBtn.getText().equals(player) && bottomRightBtn.getText().equals(player);
     }
 
     private void enableOrDisableButtons(boolean value){
